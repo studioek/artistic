@@ -30,7 +30,8 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here. Describe your available layouts, includes, sass and/or assets.
+change `_config.yml` file. If you're change theme go to `_layouts/base.html` file and change `data-theme`.
+[Themes](https://daisyui.com/docs/themes/)
 
 ## Contributing
 

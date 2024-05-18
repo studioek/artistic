@@ -3,6 +3,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {%- seo -%}
+    <link rel="stylesheet" href="{{ '/assets/css/daisyui.min.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/flowbite.min.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
     {%- feed_meta -%}
@@ -24,7 +25,10 @@
                 fontFamily:{
                     'playfair': ['Playfair Display'],
                 }
-            }
+            },
+            daisyui: {
+                themes: ["light", "dark", "cupcake"],
+            },
         }
     </script>
 </head>
