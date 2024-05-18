@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+{%- include head.html -%}
+<body class="font-playfair">
+
+{%- include header.html -%}
+
+<main>
+    <div>
+        {{ content }}
+    </div>
+</main>
+
+{%- include footer.html -%}
+
+</body>
+</html>

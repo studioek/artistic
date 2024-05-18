@@ -1,0 +1,73 @@
+---
+layout: base
+---
+
+<main class="min-h-screen">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+        {%- if page.title -%}
+            <h1 class="mt-10 text-7xl md:mt-14 lg:mt-20 ">
+                <span>
+                    {{ page.title }}
+                </span>
+            </h1>
+
+
+        {%- endif -%}
+    </div>
+
+    {{ content }}
+
+
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+
+    {% if site.paginate %}
+    {% assign posts = paginator.posts %}
+    {% else %}
+    {% assign posts = site.posts %}
+    {% endif %}
+
+
+    {%- if posts.size > 0 -%}
+    {%- if page.list_title -%}
+    <h2 class="link link-underline link-underline-black text-black">{{ page.list_title }}</h2>
+    {%- endif -%}
+    <ul class="post-list">
+        {%- assign date_format = site.artistic.date_format | default: "%b %-d, %Y" -%}
+        {%- for post in posts -%}
+        <li class="link link-underline link-underline-black text-black">
+            <span class="post-meta">{{ post.date | date: date_format }}</span>
+            <h3>
+                <a  href="{{ post.url | relative_url }}">
+                    {{ post.title | escape }}
+                </a>
+            </h3>
+            {%- if site.show_excerpts -%}
+            {{ post.excerpt }}
+            {%- endif -%}
+        </li>
+        {%- endfor -%}
+    </ul>
+    </div>
+
+    {% if site.paginate %}
+    <div class="pager">
+        <ul class="pagination">
+            {%- if paginator.previous_page %}
+            <li><a href="{{ paginator.previous_page_path | relative_url }}" class="previous-page">{{ paginator.previous_page }}</a></li>
+            {%- else %}
+            <li><div class="pager-edge">•</div></li>
+            {%- endif %}
+            <li><div class="current-page">{{ paginator.page }}</div></li>
+            {%- if paginator.next_page %}
+            <li><a href="{{ paginator.next_page_path | relative_url }}" class="next-page">{{ paginator.next_page }}</a></li>
+            {%- else %}
+            <li><div class="pager-edge">•</div></li>
+            {%- endif %}
+        </ul>
+    </div>
+    {%- endif %}
+
+    {%- endif -%}
+
+
+</main>

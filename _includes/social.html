@@ -1,0 +1,5 @@
+<div class="mt-4 sm:justify-center sm:mt-0 fill-blue-600 grid grid-cols-3 gap-2 sm:flex">
+    {%- for entry in site.artistic.social_links -%}
+    {%- include social-item.html item = entry -%}
+    {%- endfor -%}
+</div>
