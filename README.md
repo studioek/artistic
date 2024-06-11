@@ -4,8 +4,6 @@ Welcome to your new Jekyll theme! In this directory, you'll find the files you n
 
 To experiment with this code, add some sample content and run `bundle exec jekyll serve` – this directory is setup just like a Jekyll site!
 
-TODO: Delete this and the text above, and describe your gem
-
 ## Installation
 
 Add this line to your Jekyll site's `Gemfile`:
@@ -32,6 +30,7 @@ Or install it yourself as:
 
 change `_config.yml` file. If you're change theme go to `_layouts/base.html` file and change `data-theme`.
 [Themes](https://daisyui.com/docs/themes/)
+
 
 ## Contributing
 
