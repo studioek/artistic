@@ -29,8 +29,10 @@ Or install it yourself as:
 ## Usage
 
 change `_config.yml` file. If you're change theme go to `_layouts/base.html` file and change `data-theme`.
-[Themes](https://daisyui.com/docs/themes/)
 
+## Lib
+- [Daisy UI](https://daisyui.com/docs/themes/)
+- [Tailwindcss](https://tailwindcss.com/)
 
 ## Contributing
 
